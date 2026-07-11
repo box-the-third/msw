@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My Saudi Wellness</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- Bootstrap Carousel Theme -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap-theme.min.css">
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/style.css">
+
+<style>
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #555;
+  background: url(../assets/images/bodybg.jpg) repeat;
+  border-top: solid 10px #86c34a;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', Tahoma, sans-serif;
+  font-weight: 700;
+  color: #333;
+}
+
+a {
+  color: #2f338c;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover, a:focus {
+  color: #2f338c;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* =============================================
+   PAGE LOADER
+   ============================================= */
+.page-loader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fefefe;
+  z-index: 100000;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -20px 0 0 -20px;
+  background-color: #2f338c;
+  text-indent: -12345px;
+  border-radius: 100%;
+  animation: scaleout 1.0s infinite ease-in-out;
+}
+
+@keyframes scaleout {
+  0% { 
+    transform: scale(0.0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+/* =============================================
+   NAVIGATION
+   ============================================= */
+nav.navbar {
+  background-color: #2e3192;
+  background: url(../assets/images/bg-2.jpg) repeat;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  min-height: 46px;
+  z-index: 999;
+  margin-top: 10px;
+  transition: top 0.5s ease-in-out;
+}
+
+nav.navbar.fixed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  width: 100% !important;
+}
+
+.navbar:after {
+  border-bottom: 5px solid #dfdfdf;
+  clear: both;
+  content: " ";
+  display: table;
+  width: 100%;
+}
+
+.navbar .container {
+  padding: 0;
+}
+
+.navbar-toggle {
+  background-color: #2e3192;
+  margin-right: 0;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-nav {
+  float: none;
+}
+
+.navbar-nav > li > a {
+  color: #fff !important;
+  font-size: 13px;
+  padding: 14px 10px;
+  text-transform: none;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  background: none;
+  color: #2e3192 !important;
+}
+
+.navbar-collapse > .navbar-nav > li.active > a,
+.navbar-collapse > .navbar-nav > li.hover > a,
+.navbar-collapse > .navbar-nav > li > a:hover {
+  background-color: #86c34a;
+  color: #fff !important;
+}
+
+.dropdown-menu {
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  background-color: #86c34a;
+}
+
+/* Logo */
+.logo {
+  display: inline-block;
+  float: none !important;
+  padding-top: 20px;
+  vertical-align: middle;
+  width: 49%;
+}
+
+/* =============================================
+   HERO CAROUSEL
+   ============================================= */
+.carousel {
+  margin: auto;
+  max-width: 980px;
+  width: 100%;
+}
+
+.carousel-inner > .item {
+  text-align: right;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  padding: 10px 20px;
+  right: auto;
+  text-shadow: none;
+  width: 40%;
+  text-align: left;
+}
+
+.carousel-caption h1 {
+  font-size: 32px;
+  text-transform: none;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.carousel-caption p {
+  color: inherit;
+  font-size: 18px;
+  margin: 0;
+}
+
+.carousel-indicators {
+  bottom: 20px;
+  left: 0;
+  margin: 0 30px 0 0;
+  right: 0;
+  text-align: right;
+  width: auto;
+}
+
+.carousel-indicators li {
+  background-color: #fff;
+  border-color: #7cc242;
+  border-width: 2px;
+  height: 20px;
+  width: 20px;
+  margin: 0;
+}
+
+.carousel-indicators .active {
+  background-color: #84c64d;
+  height: 20px;
+  width: 20px;
+}
+
+/* =============================================
+   PARTNERS SECTION
+   ============================================= */
+#partners .who {
+  background-color: #86c34a;
+  padding-bottom: 33px;
+  text-align: center;
+  color: #fff;
+  min-height: 178px;
+}
+
+#partners .who h1 {
+  font-size: 38px;
+  margin-top: 33px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+#partners .who p {
+  font-size: 18px;
+}
+
+.partner {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  height: 0;
+  margin-bottom: 20px;
+  padding-bottom: 55%;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.partner img {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* =============================================
+   ABOUT SECTION
+   ============================================= */
+.about-body {
+  background: url(../assets/images/about-bg-img-2.jpg) no-repeat top center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Use flexbox to ensure both columns are always equal in height */
+.about-body .row {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.about-img {
+  background-color: #fff;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  padding: 60px 50px;
+  background-color: transparent; 
+}
+
+.about-text {
+  padding-bottom: 20px;
+}
+
+.about header {
+  margin-bottom: 30px;
+}
+
+.about h1 {
+  color: #6ec824;
+  font-size: 48px;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.about h3 {
+  color: #7d7d7d;
+  font-size: 31px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* --- Centered Dividers --- */
+
+/* The vertical line attached to the row, not the column */
+.about-body .row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: rgba(102, 102, 102, 0.5);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* The circular logo attached to the row center */
+.about-body .row::after {
+  content: "";
+  position: absolute;
+  top: 15%; /* Adjust this percentage to move the circle up or down */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: #fff url(../assets/images/wellness.png) no-repeat center center;
+  background-size: 55%;
+  border: 2px solid rgba(102, 102, 102, 0.5);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+/* =============================================
+   PACKAGES SECTION
+   ============================================= */
+.package {
+  text-align: center;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.package-inner {
+  background: url(../assets/images/about-bg-img.jpg) no-repeat center top;
+  background-size: cover;
+  background-color: #86c34a;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.package h1 {
+  font-size: 38px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.package p {
+  padding: 0 60px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.packages {
+  position: relative;
+  overflow: hidden;
+  color: #3b3b3b;
+  padding-top: 40px;
+}
+
+.packages:last-child {
+  padding-bottom: 120px;
+}
+
+.packages h1 {
+  color: #6ec824;
+  font-size: 33px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.packages h1:after {
+  position: absolute;
+  content: "";
+  height: 62px;
+  top: 7px;
+  width: 62px;
+  z-index: 99;
+}
+
+.packages ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 18px;
+  margin-top: 18px;
+}
+
+.packages ul li {
+  font-weight: 300;
+  position: relative;
+  padding-left: 34px;
+}
+
+.packages ul li:before {
+  background-color: #3b3b3b;
+  border-radius: 50%;
+  content: "";
+  height: 3px;
+  left: 0;
+  margin-top: 10px;
+  position: absolute;
+  width: 3px;
+}
+
+.packages h1.onsite:after { background: url(../assets/images/Onsite-icon.png) no-repeat; }
+.packages h1.wellness:after { background: url(../assets/images/wellness-icon.png) no-repeat; }
+.packages h1.screening:after { background: url(../assets/images/screening.png) no-repeat; }
+.packages h1.fitness:after { background: url(../assets/images/fitness.png) no-repeat; }
+
+.package-text-right h1:after { left: -90px; }
+.package-text-left h1:after { right: -55px; }
+
+.package-img {
+  text-align: center;
+}
+
+/* Package Table */
+.pakeg-list {
+  margin-bottom: 0;
+}
+
+.pakeg-list tr td {
+  background-color: #fbfbfb;
+}
+
+.pakeg-list tr td:nth-child(1) {
+  background-color: #FFF;
+  text-align: left;
+}
+
+/* =============================================
+   OUR TEAM SECTION
+   ============================================= */
+#our-team {
+  background-image: url(../assets/images/team-bg-img.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-bottom: 30px;
+  padding-top: 150px;
+  position: relative;
+  text-align: center;
+}
+
+.our-team {
+  color: #fff;
+}
+
+.our-team h1 {
+  color: #fff;
+}
+
+.our-team:after {
+  background: url(../assets/images/our-team.png) no-repeat;
+  content: "";
+  height: 155px;
+  margin-left: -46px;
+  position: absolute;
+  top: 0;
+  width: 62px;
+}
+
+/* =============================================
+   TESTIMONIALS SECTION
+   ============================================= */
+#testimonials{
+	background:url(/web/20230321074510im_/http://www.mysaudiwellness.com/images/testimonials-bg-img.jpg) repeat;
+	background-color:#86c34a;
+	background:#86c34a;
+	padding:20px 0;
+	color:#fff;
+	}
+.testimonial{
+	text-align: left;
+	background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #000;
+    color: #000;
+    margin-bottom: 5px;
+    padding: 10px;
+	height:inherit;
+	}
+
+.testimonial p span{
+	font-family: Arial;
+    font-size: 41px;
+    font-weight: bold;
+    line-height: 0;
+    position: relative;
+    top: 18px;
+	}
+.testimonial p span:last-child{
+	top:20px;
+	}
+.testimonial hr{
+	border-color: #000;
+    margin: 0;
+	position:relative;
+	padding-bottom:10px;
+	}
+.testimonial hr:after{
+	color: #000;
+    content:"\f0d7";
+    font-family: FontAwesome;
+    font-size: 22px;
+    left: 5px;
+    line-height: 0;
+    position: absolute;
+    top: 3px;
+	}
+.testimonial strong{
+	color:#2f338c;
+	display:block;
+	}
+
+.event-img{
+	margin-bottom:15px;
+	text-align:center;
+	}
+.event-img-inner{
+    display: block;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+	padding-bottom: 70%;
+	}
+.event-img img{
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	}
+
+
+body.ar{
+	direction:rtl;
+	text-align:right;
+	}
+
+body.ar .dropdown-menu{
+	text-align:right;
+	}
+body.ar .dropdown-menu{
+	left:auto;
+	right:0;
+	}
+
+
+body.ar .about-img{
+	margin:0;
+	}
+
+body.ar .about-img:after {
+    background-color: #fff;
+    border-left: 1px solid rgba(102, 102, 102, 0.5);
+    border-right: medium none;
+    left: -15px;
+    right: auto;
+    width: 15px;
+	}
+
+body.ar .about h1:after{
+	left:auto;
+	right: -93px;
+	}
+body.ar .package-text-right h1:after {
+	left:auto;
+    right:-77px;
+	}
+body.ar .package-text-left h1:after {
+    left:-89px;
+    right: auto;
+	}
+body.ar .packages ul li{
+    padding-right: 34px;
+	padding-left:0;
+	}
+body.ar .packages ul li:before{
+	left:auto;
+	right:0;
+	}
+
+body.ar .package:after,
+body.ar .our-team:after{
+	margin-right:-18px;
+	}
+body.ar .navbar-nav{
+	padding-right:0;
+	}
+body.ar .mainMenu{
+	float:right;
+	}
+body.ar .lg {
+    padding-left: 0;
+    padding-right: 29px;
+	}
+body.ar .jubail:before{
+	right:-6px;
+	}
+body.ar .jubail-b{
+	text-align:left;
+	}
+
+body.ar .text-right {
+    text-align: left;
+	}
+
+.bg-g{
+	background-color:#f9f9f9;
+	padding:30px 0;
+	}
+body.ar .testimonial{
+	text-align:right;
+	}
+body.ar .testimonial hr:after{
+	left:auto;
+	right: 5px;
+	}
+body.ar .contact-right{
+	right:auto;
+	left:0;
+	}
+
+
+
+.partner{
+	background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 0;
+    margin-bottom: 20px;
+    padding-bottom: 55%;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+	}
+.partner img{
+	bottom: 0;
+    left: 0;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+	}
+
+
+.pakeg-list{
+	margin-bottom:0;
+	}
+.pakeg-list tr td{
+	background-color: #fbfbfb;
+	}
+.pakeg-list tr td:nth-child(1){
+	background-color:#FFF;
+	text-align:left;
+	}
+
+.pakeg-list tr th:nth-child(2){
+	background-color:#d7d7d7;
+	color:#fff;
+	}
+.pakeg-list tr th:nth-child(3){
+	background-color:#f7b616;
+	color:#fff;
+	}
+.pakeg-list tr th:nth-child(4){
+	background-color:#7d7d7d;
+	color:#fff;
+	}
+
+.pakeg-list .glyphicon-remove{
+	color:#d00001;
+	}
+.pakeg-list .glyphicon-ok{
+	color:#12a800;
+	}
+
+.text-center th{
+	text-align:center;
+	}
+.text-center th.text-left{
+	text-align:left;
+	}
+
+
+.ar .pakeg-list tr td:nth-child(1) {
+    text-align: right;
+	}
+
+.ar .text-center th.text-left{
+	text-align:right;
+	}
+
+
+.ar .navbar-collapse > .navbar-nav > li > a {
+    padding: 13px 7px;
+	}
+.ar .dropdown-menu{
+	margin-top:0;
+	}
+
+.sidebar .panel.active .collapse{
+	display:block;
+	}
+
+/* =============================================
+   CONTACT SECTION
+   ============================================= */
+#contact {
+  background-color: #f2f2f2;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.contact h1 {
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+.contact-no div {
+  padding-bottom: 8px;
+}
+
+.contact-no label {
+  color: #86c34a;
+  font-size: 16px;
+  padding-right: 15px;
+}
+
+.contact .form-control {
+  background-color: transparent;
+  border: 1px solid #8e8e8e;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 12px;
+}
+
+.contact textarea.form-control {
+  height: 120px;
+}
+
+.contact .btn {
+  background: url(../assets/images/send.png) no-repeat;
+  border: none;
+  border-radius: 0;
+  height: 28px;
+  padding: 0;
+  width: 82px;
+}
+
+.contact-right {
+  position: relative;
+  right: -50px;
+}
+
+.map {
+  background-color: #fff;
+  border: 5px solid #dedede;
+  box-shadow: 0 0 5px rgba(177, 177, 177, 0.3);
+  position: relative;
+  top: 30px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer {
+  background-color: #3b3b3b;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer ul {
+  margin: 0;
+}
+
+.footer ul li a {
+  color: #fff;
+  font-size: 24px;
+}
+
+/* =============================================
+   RESPONSIVE (Merged Helper Rules)
+   ============================================= */
+@media print {
+  .table-responsive > .table > thead > tr > th,
+  .table-responsive > .table > tbody > tr > th,
+  .table-responsive > .table > tfoot > tr > th,
+  .table-responsive > .table > thead > tr > td,
+  .table-responsive > .table > tbody > tr > td,
+  .table-responsive > .table > tfoot > tr > td {
+    white-space: normal !important;
+  }
+  .blue-bg {
+    background-color: #2e3192 !important;
+    color: #fff;
+  }
+}
+
+@media (max-width: 991px) {
+  .carousel-caption {
+    width: 60%;
+  }
+  .carousel-caption h1 {
+    font-size: 26px;
+  }
+  .about-text {
+    padding: 40px 35px;
+  }
+  .package-text-right,
+  .package-text-left {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-xs-3  { width: 25%; }
+  .col-xs-6  { width: 50%; }
+  .col-xs-9  { width: 75%; }
+  
+  nav.navbar.fixed {
+    position: relative !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+  .carousel-inner > .item img {
+    height: 280px;
+  }
+  .carousel-caption {
+    width: 100%;
+    padding: 30px 20px 20px;
+  }
+  .carousel-caption h1 {
+    font-size: 20px;
+  }
+  .carousel-caption p {
+    font-size: 13px;
+  }
+  .about-body .about,
+  .about-img {
+    width: 100%;
+  }
+  .about-inner {
+    min-height: 260px;
+  }
+}
+
+.inner-wrapper {
+    clear: both;
+    display: inline;
+    float: left;
+    padding: 0 0px 0 0px;
+    position: relative;
+    width: 1170px;
+}
+img {
+    max-width: 100%;
+}
+.fmshown {
+	display: block !important;
+	top:0 !important;
+}
+
+
+
+@media (min-width: 1200px) {
+
+.container{
+	width:980px;
+	padding:0;
+	}
+}
+
+@media (min-width: 992px){
+	
+.contact{
+    padding-right: 100px;
+	}
+}
+
+@media (max-width: 991px) {
+
+#testimonials .col-sm-6{
+	margin-bottom:20px;
+	}
+#testimonials hr{
+	margin-top:0;
+	}
+
+}
+ 
+@media (min-width: 768px) and (max-width:991px) {
+body.ar .navbar-nav > li{
+	margin-left: 8px !important;
+	}
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	
+}
+ 
+@media (min-width: 768px){
+
+.container-fluid,
+.navbar-collapse{
+	padding:0;
+	}
+
+.navbar-collapse > .navbar-nav > li > a{
+	padding:13px 13px;
+	}
+
+.about{
+    padding-left:45px;
+	}
+.about-img img{
+	bottom: 0;
+    margin: auto;
+    padding: 0 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+	}
+.about-inner{
+	float: right;
+    height: 100%;
+    position: relative;
+    max-width: 490px;
+	width:100%;
+	}
+.about-text{
+	float:left;
+	max-width:490px;
+	width:100%;
+	}
+
+.packages:after{
+	border-left: 1px solid #b0b0b0;
+    content: "";
+    height: 100%;
+    left: -29px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+	}
+	
+.package-img{
+	padding-top:80px;
+	}
+
+.packages .col-sm-6{
+	padding-left: 44px;
+    padding-right: 40px;
+	}
+body.ar .packages .col-sm-6 {
+    padding-right: 60px;
+	}
+
+.contact-right{
+	background-color:#fff;
+	bottom: 0;
+    padding-left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+	}
+
+body.ar .row [class^="col-"]{
+	float:right;
+	}
+
+body.ar .navbar-nav > li{
+	float: right;
+    margin-left: 19px;
+    margin-right: 0;
+	}
+body.ar .navbar-collapse > .navbar-nav > li:last-child {
+    float: left;
+    margin:0 !important;
+	}
+
+body.ar .about{
+    padding-left:0px;
+	}
+body.ar .about-text{
+	float: right;
+    padding-right: 62px;
+	}
+body.ar .about-inner {
+    float: left;
+	}
+
+body.ar .package-img {
+    padding-top:0px;
+	}
+body.ar .pull-right {
+    float:left !important;
+	}
+body.ar .contact:after{
+	left: -45px;
+	right:auto;
+	}
+body.ar .contact{
+	padding-left: 100px;
+    padding-right: 15px;
+	}
+
+
+
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+.content .row [class^="col-"],
+footer .row [class^="col-"]{
+	margin-bottom:20px;
+	}
+footer .row [class^="col-"]:last-child{
+	margin-bottom:0;
+	}
+.img-thumbnail,
+.img-responsive{
+	margin:auto;
+	display:block;
+	}
+
+body.nav-collapse{
+	overflow:hidden;
+	}
+
+body{
+	padding-top:55px;
+	}
+.navbar{
+	left: 0;
+    position: fixed !important;
+    right: 0;
+    top: 0 !important;
+    width: 100% !important;
+	}
+.navbar .navbar-toggle{
+	margin-right:15px;
+	}
+
+.navbar-collapse{
+	background-color: #2f31a0;
+   	padding-left: 0;
+   	padding-right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll !important;
+    position: fixed;
+    right: 0;
+    top: 60px;
+	}
+.navbar-nav{
+	margin-top:0;
+	margin:0;
+	}
+
+.navbar-collapse > .navbar-nav > li > a{
+	color: #fff;
+}
+.dropdown-menu{
+	float:none;
+	position:relative;
+	}
+.carousel-inner > .item{
+	text-align:center;
+	}
+.carousel-caption{
+	bottom: 0;
+    left: 0;
+    padding: 10px 30px 40px;
+	position:relative;
+    width: 100%;
+	}
+.carousel-caption h1{
+	font-size:26px;
+	}
+.carousel-caption p{
+	font-size:16px;
+	}
+
+.carousel-indicators{
+	bottom:6px;
+	width:100%;
+	}
+
+.container-inner{
+    padding: 0 15px;
+	}
+
+/* =============================================
+   ABOUT SECTION - RESPONSIVE
+   ============================================= */
+
+@media (max-width: 767px) {
+  /* Disable flexbox so columns stack naturally */
+  .about-body .row {
+    display: block; 
+  }
+
+  /* Hide the central line and logo on mobile */
+  .about-body .row::before,
+  .about-body .row::after {
+    display: none;
+  }
+
+  .about-img {
+    text-align: center;
+    height: auto !important;
+    padding: 30px 15px;
+  }
+
+  .about {
+    height: auto !important;
+    padding: 40px 20px;
+  }
+
+  .about h1 {
+    font-size: 36px; /* Slightly smaller for mobile */
+  }
+
+  .about h3 {
+    font-size: 24px;
+  }
+}
+
+/* Arabic RTL Support for text alignment */
+body.ar .about h1, 
+body.ar .about h3, 
+body.ar .about-text {
+  text-align: right;
+}
+
+.packages .pull-right{
+	float:none !important;
+	}
+
+.packages h1{
+	padding-right:70px;
+	}
+body.ar .packages h1{
+	padding-right:0px;
+	padding-left:70px;
+	}
+.package-text-right h1:after,
+.package-text-left h1:after{
+	left:auto;
+	right:0;
+	}
+
+body.ar .col-sm-6 h1:after {
+    left: 0 !important;
+    right: auto !important;
+	}
+
+.contact:after{
+	bottom: -40px;
+	left:0;
+	right:0;
+	top:auto;
+	margin:auto;
+	}
+.map{
+	border:none;
+	text-align:center;
+	}
+
+
+.article-img{
+	float:none !important;
+	}
+
+
+}
+
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12{
+	width:100%;
+	}
+.jubail-b,
+.logo{
+	text-align:center;
+	}
+
+.navbar-header .jubail{
+	display: block;
+    float: left;
+    margin-left: 6px;
+    margin-top: 12px;
+	}
+	
+.footer,
+.footer .text-right{
+	text-align:center;
+	}
+}
+}
+
+</style>
+
+  <script>
+    function validate() {
+      var emailRegex = /^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$/;
+      if (document.form1.name.value === '') {
+        alert('Please enter name');
+        document.form1.name.focus();
+        return false;
+      }
+      if (!document.form1.email.value.match(emailRegex)) {
+        alert('Please enter valid email address');
+        document.form1.email.focus();
+        return false;
+      }
+      if (document.form1.message.value === '') {
+        alert('Please enter message');
+        document.form1.message.focus();
+        return false;
+      }
+      if (document.form1.security_code.value === '' || document.form1.security_code.value === 'Enter the code above here') {
+        alert('Please enter security code');
+        document.form1.security_code.focus();
+        return false;
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- ==================== TOP / HERO ==================== -->
+  <section id="home" class="page-section">
+
+    <!-- LOGO & NAV -->
+    <div class="container clone">
+      <div class="row" style="align-items:center;">
+        <div class="col-xs-6 logo">
+          <a href="#home">
+            <img src="assets/images/1_logo.png" alt="My Saudi Wellness">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="sticky-wrapper" class="sticky-wrapper">
+            <nav class="navbar" id="main-nav">
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div class="collapse navbar-collapse" id="main-navbar">
+                  <ul class="nav navbar-nav scroll-nav">
+                    <li class="nolink"><a href="#about-body">About Our Program</a></li>
+                    <li class="nolink"><a href="#packages">Packages</a></li>
+                    <li class="nolink"><a href="#our-team">Our Team</a></li>
+                    <li class="nolink"><a href="#" target="_blank">Member Area</a></li>
+                    <li class="nolink"><a href="#" target="_blank">HRA</a></li>
+                    <li class="nolink"><a href="#" style="cursor:pointer;">Company Brochure</a></li>
+
+                    <li class="dropdown">
+                      <a role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        Useful Articles <span class="caret"></span>
+                      </a>
+                      <ul role="menu" class="dropdown-menu">
+                        <li><a href="#">Fitness Programs</a></li>
+                        <li><a href="#">Healthy Nutrition</a></li>
+                        <li><a href="#">Lifestyle Illnesses</a></li>
+                        <li><a href="#">Sleep Problems</a></li>
+                        <li><a href="#">Stress and Anxiety</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown">
+                      <a role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        Events Gallery <span class="caret"></span>
+                      </a>
+                      <ul role="menu" class="dropdown-menu">
+                        <li><a href="#">Jubail Wellness Program</a></li>
+                        <li><a href="#">Riyadh Wellness Street</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="nolink"><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="ar">عربي</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO CAROUSEL -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <div class="container">
+        <div style="position:relative;">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+
+            <div class="item active">
+              <img src="assets/images/1_sw1.jpg" alt="The most unique program">
+              <div class="carousel-caption">
+                <h1>The most unique</h1>
+                <p>program in Saudi Arabia dedicated to changing the lifestyles of the participants and their community</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="assets/images/2_sw2.jpg" alt="Empowers the participant">
+              <div class="carousel-caption">
+                <h1>Empowers the participant</h1>
+                <p>to improve their wellness by developing healthy living habits.</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="assets/images/3_sw3.jpg" alt="A private personalized">
+              <div class="carousel-caption">
+                <h1>A private personalized</h1>
+                <p>online tool designed to allow each participant to follow their own changes.</p>
+              </div>
+            </div>
+
+          </div><!-- /.carousel-inner -->
+
+          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ==================== END HOME ==================== -->
+
+
+  <div id="contentWrapper">
+
+    <!-- ==================== PARTNERS ==================== -->
+    <section id="partners">
+        <div class="who">
+            <div class="container">
+                <h1>OUR PARTNERS</h1>
+                                <div class="row">
+                	 					<div class="col-sm-4">
+                      <div class="partner">
+                        <img alt="" src="assets/images/1_rchp logo.jpg">
+                      </div>
+                    </div>   
+										<div class="col-sm-4">
+                      <div class="partner">
+                        <img alt="" src="assets/images/2_peabodieslogo.jpg">
+                      </div>
+                    </div>   
+										<div class="col-sm-4">
+                      <div class="partner">
+                        <img alt="" src="assets/images/3_CS_Wort-Bildmarke.jpg">
+                      </div>
+                    </div>   
+										<div class="col-sm-4">
+                      <div class="partner">
+                        <img alt="" src="assets/images/5_DisciplineXgames-logo.jpg">
+                      </div>
+                    </div>   
+										<div class="col-sm-4">
+                      <div class="partner">
+                        <img alt="" src="assets/images/7_Hyjiya-logo-25.2.14.jpg">
+                      </div>
+                    </div>   
+										<div class="col-sm-4">
+                      <div class="partner">
+                        <img alt="" src="assets/images/9_AeroFit_logo600.jpg">
+                      </div>
+                    </div>   
+										<div class="col-sm-4">
+                      <div class="partner">
+                        <img alt="" src="assets/images/10_european-lifestyle-logo.jpg">
+                      </div>
+                    </div>   
+                </div>
+            </div>
+          </div>
+        </section>
+
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="page-section active">
+      <div class="about-body" id="about-body">
+        <div class="container">
+          <div class="row" style="position:relative;">
+            <div class="col-sm-6 col-xs-12 about-img">
+              <div class="about-inner">
+                <img src="assets/images/1_my_saudi_wellness_side.jpg" alt="My Saudi Wellness" class="img-responsive" style="width:100%; height:auto;">
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12 about">
+              <div class="about-text">
+                <header>
+                  <h3></h3>
+                  <h1>My Wellness Program</h1>
+                  <h3></h3>
+                </header>
+                <p>It is the most unique program in Saudi Arabia dedicated to changing the lifestyles of the participants and their community to become more healthy and is the most comprehensive wellness program in the Middle East.</p>
+                <p>The program empowers the participant to improve their wellness by developing healthy living habits so as to remain well and vibrant in both their professional and personal life.</p>
+                <p>My Saudi Wellness aims to:</p>
+                <ul>
+                  <li>Increase employee productivity and reduce sick leave days</li>
+                  <li>Enhance recruitment, retention and employee satisfaction</li>
+                  <li>Decrease work related injuries</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== PACKAGES ==================== -->
+    <section id="packages" class="page-section">
+
+      <div class="package">
+        <div class="package-inner">
+          <div class="container" style="background-color:transparent;">
+            <h1>Our Package</h1>
+            <p>Various packages are available to meet the needs of our clients and can be tailored to specific objectives. These packages will include a various combination of the following:</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+
+          <!-- Package 1 -->
+          <div class="packages" style="width:100%;">
+            <div class="col-sm-6 package-img" style="padding:0;">
+              <img src="assets/images/1_Onsite.jpg" alt="Wellness Assessment Portal">
+            </div>
+            <div class="col-sm-6 package-text-right">
+              <h1>Wellness Assessment<br>Portal</h1>
+              <p>This private personalized online tool was designed to allow each participant to follow their own changes and includes:</p>
+              <ul>
+                <li>Comprehensive health assessment for the participant</li>
+                <li>Daily news and recommendations</li>
+                <li>Nutritional advice for a more well life</li>
+                <li>Online fitness guides</li>
+                <li>Health age calculator to follow the participants' changes</li>
+                <li>Online tracking of rewards, and challenges</li>
+              </ul>
+              <div class="local-scroll"><a href="#pakeg-list">View Package Details</a></div>
+            </div>
+          </div>
+
+          <!-- Package 2 -->
+          <div class="packages" style="width:100%;">
+            <div class="col-sm-6 package-img pull-right" style="padding:0;">
+              <img src="assets/images/2_wellness-img.jpg" alt="Wellness Street">
+            </div>
+            <div class="col-sm-6 package-text-left">
+              <h1>Wellness<br>Street</h1>
+              <p>By walking through our "wellness street" participants will be assessed by our trained professionals who will do a range of assessments including:</p>
+              <ul>
+                <li>A basic Medical exam</li>
+                <li>A range of Laboratory tests</li>
+                <li>Heart test</li>
+                <li>Stress assessment</li>
+                <li>A unique fitness test performed by our fitness professionals</li>
+                <li>Body fat and metabolic rates</li>
+              </ul>
+              <div class="local-scroll"><a href="#pakeg-list">View Package Details</a></div>
+            </div>
+          </div>
+
+          <!-- Package 3 -->
+          <div class="packages" style="width:100%;">
+            <div class="col-sm-6 package-img" style="padding:0;">
+              <img src="assets/images/3_screening.jpg" alt="Educational Workshops">
+            </div>
+            <div class="col-sm-6 package-text-right">
+              <h1>Educational<br>Workshops</h1>
+              <p>Consisting of specialized educational sessions presented by world renowned wellness and public health experts covering topics such as:</p>
+              <ul>
+                <li>Weight management</li>
+                <li>Stress management for the executive</li>
+                <li>Staying fit</li>
+                <li>Sexual habits and health</li>
+                <li>Stop smoking</li>
+                <li>Improving sleep</li>
+              </ul>
+              <div class="local-scroll"><a href="#pakeg-list">View Package Details</a></div>
+            </div>
+          </div>
+
+          <!-- Package 4 -->
+          <div class="packages" style="width:100%;">
+            <div class="col-sm-6 package-img pull-right" style="padding:0;">
+              <img src="assets/images/4_fitness-img.jpg" alt="Analysis & Mentoring">
+            </div>
+            <div class="col-sm-6 package-text-left">
+              <h1>Analysis &amp;<br>Mentoring</h1>
+              <p>Participants receive a wellness report covering five primary components. This is an accurate indicator of the participants' current health and wellness and is the best predictor of long term health and wellness.</p>
+              <p>Mentoring will aim to maintaining engagement and building commitment from participants to reach their goals by online monitoring, seminars, challenges and rewards as well as personal interviews.</p>
+              <div class="local-scroll"><a href="#pakeg-list">View Package Details</a></div>
+            </div>
+          </div>
+
+        </div><!-- /.row -->
+
+
+        <!-- ---- PACKAGE TABLE ---- -->
+        <table id="pakeg-list" class="table table-bordered pakeg-list text-center">
+          <thead>
+            <tr>
+              <th class="text-left" width="540">PACKAGES</th>
+              <th>Basic</th>
+              <th>Silver</th>
+              <th>Gold</th>
+              <th>Platinum</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Online Portal - Basic</td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Online Portal - Premium</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Wellness Tips</td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Wellness chat room</td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Wellness Report</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Medical Screen</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Basic Blood Test (Glucose, cholesterol)</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Advanced Blood Test (Kidney function, lipid profile, CBC)</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Comprehensive Blood Test (Vitamin D levels, PSA for men above 50)</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Bone Densitometry</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Cardioscan Basic Metabolic Rate</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Cardioscan Comprehensive (cardiac stress testing)</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Group counseling</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>One to one counseling</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Individual fitness program</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Activity tracker</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Sleep tracker</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Ongoing visits – 6 visits</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Monthly challenges and walkathon</td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+            <tr>
+              <td>Genetic Testing</td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-remove"></span></td>
+              <td><span class="glyphicon glyphicon-ok"></span></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div><!-- /.container -->
+    </section>
+
+
+    <!-- ==================== OUR TEAM ==================== -->
+    <section id="our-team" class="page-section">
+      <div class="container">
+        <div class="our-team">
+          <h1>Our Team</h1>
+          <p>Our team have experiences and a range of solutions with international companies, who aim to provide outstanding programs for their community.</p>
+          <p><br>The team consists of experts in the following fields:</p>
+          <p>
+            • The wellness and health industry in public and corporate institutions<br>
+            • Fitness and preventative exercise experts<br>
+            • Nutrition and health education experts<br>
+            • Psychologists
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section id="testimonials" class="page-section">
+      <div class="container">
+        <div class="text-center">
+          <h1>Testimonials</h1><br>
+
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <div class="testimonial">
+                <p><span>"</span>It was a great chance, I like the program and it is worth the implementation. A great initiative for all Saudis. The initiative for the future.<span>"</span></p>
+                <hr>
+                <strong>Energy Services Co – CEO</strong>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="testimonial">
+                <p><span>"</span>Very well done program that encourages the care of self wellness. Thank you and the team involved for the value, they added. This will be an idea generation for others.<span>"</span></p>
+                <hr>
+                <strong>Jubail Energy Services Co. – CEO</strong>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="testimonial">
+                <p><span>"</span>Very well done program that encourages the care of self wellness. Thank you and the team involved for the value, they added. This will be an idea generation for others.<span>"</span></p>
+                <hr>
+                <strong>Sahara Petrochemicals Co. – Executive President</strong>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="testimonial">
+                <p><span>"</span>Excellent program for self wellness. Better to continue monitoring. Thank you for the program.<span>"</span></p>
+                <hr>
+                <strong>Chemonal Co. – Vice President</strong>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <div class="testimonial">
+                <p><span>"</span>Excellent initiative, an eye opener for executives. Great start to health improvement &amp; self involvement others support.<span>"</span></p>
+                <hr>
+                <strong>Director</strong>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="testimonial">
+                <p><span>"</span>Excellent opportunity to change our life &amp; health style. Need consultation &amp; challenge over next period. Thanks to all team for their kindness.<span>"</span></p>
+                <hr>
+                <strong>Director</strong>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="testimonial">
+                <p><span>"</span>Excellent Program<span>"</span></p>
+                <hr>
+                <strong>Businessman</strong>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="testimonial">
+                <p><span>"</span>Very well done program that encourages the care of self wellness. Thank you and the team involved for the value, they added. This will be an idea generation for others.<span>"</span></p>
+                <hr>
+                <strong>Sahara Petrochemicals – Executive President</strong>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <div class="testimonial">
+                <p><span>"</span>It was a great chance, I like the program and it is worth the implementation. A great initiative for all Saudis. The initiative for the future.<span>"</span></p>
+                <hr>
+                <strong>Jubail Energy Services – CEO</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="page-section">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-6 contact">
+            <h1>Contact Us</h1>
+            <p>First Floor, Samama Building, Prince Mohammed Bin Abdulaziz Road, (Tahlia), Riyadh, Saudi Arabia.</p>
+            <div class="contact-no">
+              <div><label>T :</label> 0505278945 / 0112161999</div>
+              <div><label>F :</label> –</div>
+              <div><label>E :</label><a href="mailto:info@mysaudiwellness.com">info@mysaudiwellness.com</a></div>
+            </div>
+
+            <a name="email"></a>
+            <form action="index.php" method="post" enctype="multipart/form-data" name="form1" onsubmit="return validate()">
+              <h1>Leave Us A Message</h1>
+              <input class="form-control" type="text" placeholder="Name" name="name">
+              <input class="form-control" type="text" placeholder="Email" name="email">
+              <textarea class="form-control" placeholder="Message" name="message"></textarea>
+            </form>
+          </div>
+
+          <div class="col-sm-6 contact-right">
+            <div class="map">
+              <img src="assets/images/1_map.jpg" alt="Location Map">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /#contentWrapper -->
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row" style="align-items:center;">
+        <div class="col-xs-9">
+          <p>© Copyright by MySaudiWellness. All Rights Reserved 2020.</p>
+        </div>
+        <div class="col-xs-3 text-right">
+          <ul class="list-inline">
+            <li class="facebook">
+              <a href="https://www.facebook.com/mysaudiwellness" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li class="twitter">
+              <a href="https://twitter.com/mysaudiwellness" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+ 
+  <script>
+      // Smooth scroll for anchor links
+      $('a[href^="#"]').on('click', function (e) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          e.preventDefault();
+          $('html, body').stop().animate({ scrollTop: target.offset().top - 60 }, 600, 'swing');
+          // Close mobile menu
+          $('.navbar-collapse').collapse('hide');
+        }
+      });
+
+      // Match heights for testimonials
+      function matchHeights() {
+        $('#testimonials .row').each(function () {
+          var maxH = 0;
+          $(this).find('.testimonial').css('height', '').each(function () {
+            if ($(this).outerHeight() > maxH) maxH = $(this).outerHeight();
+          }).css('height', maxH + 'px');
+        });
+      }
+
+      matchHeights();
+      $(window).on('resize', matchHeights);
+  </script>
+
+</body>
+</html>

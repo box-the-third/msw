@@ -1,0 +1,371 @@
+.inner-wrapper {
+    clear: both;
+    display: inline;
+    float: left;
+    padding: 0 0px 0 0px;
+    position: relative;
+    width: 1170px;
+}
+img {
+    max-width: 100%;
+}
+.fmshown {
+	display: block !important;
+	top:0 !important;
+}
+
+
+
+@media (min-width: 1200px) {
+
+.container{
+	width:980px;
+	padding:0;
+	}
+}
+
+@media (min-width: 992px){
+	
+.contact{
+    padding-right: 100px;
+	}
+}
+
+@media (max-width: 991px) {
+
+#testimonials .col-sm-6{
+	margin-bottom:20px;
+	}
+#testimonials hr{
+	margin-top:0;
+	}
+
+}
+ 
+@media (min-width: 768px) and (max-width:991px) {
+body.ar .navbar-nav > li{
+	margin-left: 8px !important;
+	}
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	
+}
+ 
+@media (min-width: 768px){
+
+.container-fluid,
+.navbar-collapse{
+	padding:0;
+	}
+
+.navbar-collapse > .navbar-nav > li > a{
+	padding:13px 13px;
+	}
+
+.about{
+    padding-left:45px;
+	}
+.about-img img{
+	bottom: 0;
+    margin: auto;
+    padding: 0 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+	}
+.about-inner{
+	float: right;
+    height: 100%;
+    position: relative;
+    max-width: 490px;
+	width:100%;
+	}
+.about-text{
+	float:left;
+	max-width:490px;
+	width:100%;
+	}
+
+.packages:after{
+	border-left: 1px solid #b0b0b0;
+    content: "";
+    height: 100%;
+    left: -29px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+	}
+	
+.package-img{
+	padding-top:80px;
+	}
+
+.packages .col-sm-6{
+	padding-left: 44px;
+    padding-right: 40px;
+	}
+body.ar .packages .col-sm-6 {
+    padding-right: 60px;
+	}
+
+.contact-right{
+	background-color:#fff;
+	bottom: 0;
+    padding-left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+	}
+
+body.ar .row [class^="col-"]{
+	float:right;
+	}
+
+body.ar .navbar-nav > li{
+	float: right;
+    margin-left: 19px;
+    margin-right: 0;
+	}
+body.ar .navbar-collapse > .navbar-nav > li:last-child {
+    float: left;
+    margin:0 !important;
+	}
+
+body.ar .about{
+    padding-left:0px;
+	}
+body.ar .about-text{
+	float: right;
+    padding-right: 62px;
+	}
+body.ar .about-inner {
+    float: left;
+	}
+
+body.ar .package-img {
+    padding-top:0px;
+	}
+body.ar .pull-right {
+    float:left !important;
+	}
+body.ar .contact:after{
+	left: -45px;
+	right:auto;
+	}
+body.ar .contact{
+	padding-left: 100px;
+    padding-right: 15px;
+	}
+
+
+
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+.content .row [class^="col-"],
+footer .row [class^="col-"]{
+	margin-bottom:20px;
+	}
+footer .row [class^="col-"]:last-child{
+	margin-bottom:0;
+	}
+.img-thumbnail,
+.img-responsive{
+	margin:auto;
+	display:block;
+	}
+
+body.nav-collapse{
+	overflow:hidden;
+	}
+
+body{
+	padding-top:55px;
+	}
+.navbar{
+	left: 0;
+    position: fixed !important;
+    right: 0;
+    top: 0 !important;
+    width: 100% !important;
+	}
+.navbar .navbar-toggle{
+	margin-right:15px;
+	}
+
+.navbar-collapse{
+	background-color: #2f31a0;
+   	padding-left: 0;
+   	padding-right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll !important;
+    position: fixed;
+    right: 0;
+    top: 60px;
+	}
+.navbar-nav{
+	margin-top:0;
+	margin:0;
+	}
+
+.navbar-collapse > .navbar-nav > li > a{
+	color: #fff;
+}
+.dropdown-menu{
+	float:none;
+	position:relative;
+	}
+.carousel-inner > .item{
+	text-align:center;
+	}
+.carousel-caption{
+	bottom: 0;
+    left: 0;
+    padding: 10px 30px 40px;
+	position:relative;
+    width: 100%;
+	}
+.carousel-caption h1{
+	font-size:26px;
+	}
+.carousel-caption p{
+	font-size:16px;
+	}
+
+.carousel-indicators{
+	bottom:6px;
+	width:100%;
+	}
+
+.container-inner{
+    padding: 0 15px;
+	}
+
+/* =============================================
+   ABOUT SECTION - RESPONSIVE
+   ============================================= */
+
+@media (max-width: 767px) {
+  /* Disable flexbox so columns stack naturally */
+  .about-body .row {
+    display: block; 
+  }
+
+  /* Hide the central line and logo on mobile */
+  .about-body .row::before,
+  .about-body .row::after {
+    display: none;
+  }
+
+  .about-img {
+    text-align: center;
+    height: auto !important;
+    padding: 30px 15px;
+  }
+
+  .about {
+    height: auto !important;
+    padding: 40px 20px;
+  }
+
+  .about h1 {
+    font-size: 36px; /* Slightly smaller for mobile */
+  }
+
+  .about h3 {
+    font-size: 24px;
+  }
+}
+
+/* Arabic RTL Support for text alignment */
+body.ar .about h1, 
+body.ar .about h3, 
+body.ar .about-text {
+  text-align: right;
+}
+
+.packages .pull-right{
+	float:none !important;
+	}
+
+.packages h1{
+	padding-right:70px;
+	}
+body.ar .packages h1{
+	padding-right:0px;
+	padding-left:70px;
+	}
+.package-text-right h1:after,
+.package-text-left h1:after{
+	left:auto;
+	right:0;
+	}
+
+body.ar .col-sm-6 h1:after {
+    left: 0 !important;
+    right: auto !important;
+	}
+
+.contact:after{
+	bottom: -40px;
+	left:0;
+	right:0;
+	top:auto;
+	margin:auto;
+	}
+.map{
+	border:none;
+	text-align:center;
+	}
+
+
+.article-img{
+	float:none !important;
+	}
+
+
+}
+
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12{
+	width:100%;
+	}
+.jubail-b,
+.logo{
+	text-align:center;
+	}
+
+.navbar-header .jubail{
+	display: block;
+    float: left;
+    margin-left: 6px;
+    margin-top: 12px;
+	}
+	
+.footer,
+.footer .text-right{
+	text-align:center;
+	}
+}
+}
