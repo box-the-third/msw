@@ -736,11 +736,11 @@
         <p data-i18n="contact_intro">Ready to transform your workplace? Request a consultation to discuss a tailored wellness program for your team.</p>
         <br>
         <p><strong data-i18n="contact_addr_label">Address:</strong><br>
-          <span data-i18n="contact_addr">First Floor, Samama Building, Prince Mohammed Bin Abdulaziz Road (Tahlia), Riyadh, Saudi Arabia.</span>
+          <span data-i18n="contact_addr"> 3610 alrafia, Riyadh 12751, Saudi Arabia.</span>
         </p>
-        <p><strong data-i18n="contact_phone_label">Phone:</strong><br>0505278945 / 0112161999</p>
+        <p><strong data-i18n="contact_phone_label">Phone:</strong><br>0504156292</p>
         <p><strong data-i18n="contact_email_label">Email:</strong><br>
-          <a href="mailto:info@mysaudiwellness.com">info@mysaudiwellness.com</a>
+          <a href="mailto:admin@mysaudiwellness.co">admin@mysaudiwellness.co</a>
         </p>
       </div>
 
@@ -751,10 +751,10 @@
           2. Create a new form and copy your Form ID (looks like: xpwzabcd).
           3. Replace YOUR_FORM_ID below with your actual Form ID.
         -->
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xojgdepa" method="POST" novalidate>
           <input type="text"  name="name"    id="cf-name"    placeholder="" required data-i18n-ph="form_name_ph">
           <input type="email" name="email"   id="cf-email"   placeholder="" required data-i18n-ph="form_email_ph">
-          <input type="text"  name="company" id="cf-company"                         data-i18n-ph="form_company_ph">
+          <input type="text"  name="company" id="cf-company" data-i18n-ph="form_company_ph">
           <textarea name="message" id="cf-message" placeholder="" required data-i18n-ph="form_msg_ph"></textarea>
           <button type="submit" class="btn btn-primary" id="submitBtn" data-i18n="form_submit">Send Message</button>
           <div id="formStatus"></div>
@@ -779,10 +779,10 @@
 
     /* ============================================================
        FORMSPREE ENDPOINT
-       Replace YOUR_FORM_ID with your Formspree form ID.
-       Example: https://formspree.io/f/xpwzabcd
+       Using the Formspree endpoint for this site.
+       Endpoint: https://formspree.io/f/xojgdepa
     ============================================================ */
-    var FORMSPREE_URL = "https://formspree.io/f/YOUR_FORM_ID";
+    var FORMSPREE_URL = "https://formspree.io/f/xojgdepa";
 
     /* ============================================================
        TRANSLATIONS
