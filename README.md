@@ -1,73 +1,74 @@
-# My Saudi Wellness – Website Files
+# My Saudi Wellness (MSW)
 
-## File Structure
+Marketing website for **My Saudi Wellness** — corporate, school & community
+wellness programs across Saudi Arabia. Built with **Next.js (App Router)** and
+deployed as a **static export** to **GitHub Pages** at
+`https://box-the-third.github.io/msw/`.
+
+## Tech
+
+- **Next.js 14** (App Router, React 18)
+- Static export (`output: "export"`) — no server needed, just static files
+- Plain CSS design system in `app/globals.css` (brand colours sampled from the
+  logo: blue `#2E3192`, green `#78C03C`)
+- Zero third-party UI dependencies
+
+## Project structure
 
 ```
-mysaudiwellness/
-├── index.html              ← Main page (all content)
-├── css/
-│   └── style.css           ← All custom styles
-└── assets/
-    └── images/             ← Place your image files here
-        │
-        ├── logo.png                  ← Site logo (from: logo/1_logo.png)
-        │
-        │   HERO BANNERS
-        ├── banner1.jpg               ← (from: mainbanners/1_sw1.jpg)
-        ├── banner2.jpg               ← (from: mainbanners/2_sw2.jpg)
-        ├── banner3.jpg               ← (from: mainbanners/3_sw3.jpg)
-        │
-        │   ABOUT
-        ├── about-side.jpg            ← (from: aboutus/1_my_saudi_wellness_side.jpg)
-        │
-        │   PACKAGES
-        ├── pkg-onsite.jpg            ← (from: packages/1_Onsite.jpg)
-        ├── pkg-wellness.jpg          ← (from: packages/2_wellness-img.jpg)
-        ├── pkg-screening.jpg         ← (from: packages/3_screening.jpg)
-        ├── pkg-fitness.jpg           ← (from: packages/4_fitness-img.jpg)
-        │
-        │   PARTNERS
-        ├── partner-rchp.jpg          ← (from: partners/1_rchp logo.jpg)
-        ├── partner-peabodies.jpg     ← (from: partners/2_peabodieslogo.jpg)
-        ├── partner-cs.jpg            ← (from: partners/3_CS_Wort-Bildmarke.jpg)
-        ├── partner-disciplinex.jpg   ← (from: partners/5_DisciplineXgames-logo.jpg)
-        ├── partner-hyjiya.jpg        ← (from: partners/7_Hyjiya-logo-25.2.14.jpg)
-        ├── partner-aerofit.jpg       ← (from: partners/9_AeroFit_logo600.jpg)
-        ├── partner-european.jpg      ← (from: partners/10_european-lifestyle-logo.jpg)
-        │
-        │   CONTACT
-        ├── map.jpg                   ← (from: contactus/1_map.jpg)
-        └── captcha.png               ← Captcha image (dynamic on original; use placeholder)
+app/
+  layout.js        # <html> shell, fonts, SEO metadata
+  page.js          # Home page — composes the sections below
+  globals.css      # design tokens + all component styles
+components/
+  Header.js        # sticky white nav, dropdowns, mobile drawer
+  HeroCarousel.js  # 6-banner auto-playing slider with dark overlay box
+  Milestones.js    # "Million Health Scans" stat band
+  Services.js      # 6-card services grid with inline SVG icons
+  PastEvents.js    # placeholder event gallery
+  Clients.js       # placeholder client-logo row
+  Footer.js        # contact info + quick links
+  BackToTop.js     # scroll-to-top button
+lib/
+  site.js          # all page copy, nav config + asset() helper
+public/
+  assets/images/   # logos, hero backgrounds, partner logos
+  .nojekyll        # keep GitHub Pages from stripping /_next
+.github/workflows/
+  deploy.yml       # build + deploy to GitHub Pages on push to main
 ```
 
-## How to recover the original images
+## Local development
 
-Open the Wayback Machine URLs below in your browser and save each file:
+```bash
+npm install
+npm run dev        # http://localhost:3000
+```
 
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/logo/1_logo.png
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/mainbanners/1_sw1.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/mainbanners/2_sw2.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/mainbanners/3_sw3.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/aboutus/1_my_saudi_wellness_side.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/packages/1_Onsite.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/packages/2_wellness-img.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/packages/3_screening.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/packages/4_fitness-img.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/partners/1_rchp logo.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/partners/2_peabodieslogo.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/partners/3_CS_Wort-Bildmarke.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/partners/5_DisciplineXgames-logo.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/partners/7_Hyjiya-logo-25.2.14.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/partners/9_AeroFit_logo600.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/partners/10_european-lifestyle-logo.jpg
-- https://web.archive.org/web/20230405im_/http://mysaudiwellness.com/contactus/1_map.jpg
+## Production build (static export)
 
-Save each file into the assets/images/ folder using the filenames listed above.
+```bash
+npm run build      # emits ./out — a fully static site
+```
 
-## Notes
+## Deployment
 
-- The page uses Bootstrap 3 and Font Awesome 4 loaded from CDN — no internet = no icons/grid.
-  If you need a fully offline version, download those libraries too.
-- The contact form's CAPTCHA was server-generated on the original; replace with a static image or
-  a JS-based captcha (e.g. reCAPTCHA) for your live version.
-- The navbar sticks to the top on scroll via the included JS in index.html.
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the
+static export and publishes it to GitHub Pages.
+
+**One-time setup:** in the repo's **Settings → Pages**, set **Source** to
+**GitHub Actions**.
+
+> The site is served from a project path (`/msw`), so `next.config.mjs` sets
+> `basePath: "/msw"` in production. All image URLs go through the `img()` helper
+> in `lib/site.js` so they resolve correctly both locally and on Pages.
+
+## Editing content
+
+Almost all copy (nav, hero slides, services, footer links) lives in
+[`lib/site.js`](lib/site.js) — edit there rather than in the components.
+
+## Legacy
+
+The previous single-file static site is preserved in this repo history
+(`index.html`, `css/`, `script.js`).
