@@ -1,7 +1,35 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { NAV, SITE, img } from "@/lib/site";
+
+/**
+ * Render the correct element for a nav href:
+ *  - external (http…) → <a target="_blank">
+ *  - internal route/anchor ("/…", "/#…") → next/link so basePath ("/msw") is applied
+ */
+function NavAnchor({ href, external, className, children, onClick, role }) {
+  if (external) {
+    return (
+      <a
+        href={href}
+        className={className}
+        role={role}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={onClick}
+      >
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link href={href} className={className} role={role} onClick={onClick}>
+      {children}
+    </Link>
+  );
+}
 
 export default function Header() {
   const [open, setOpen] = useState(false); // mobile drawer
@@ -23,9 +51,9 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container nav-bar">
-        <a href="#top" className="brand" aria-label={`${SITE.name} — home`} onClick={close}>
+        <Link href="/" className="brand" aria-label={`${SITE.name} — home`} onClick={close}>
           <img src={img("1_logo.png")} alt={`${SITE.name} logo`} />
-        </a>
+        </Link>
 
         <button
           className={`nav-toggle ${open ? "open" : ""}`}
@@ -41,11 +69,8 @@ export default function Header() {
             const hasChildren = !!item.children;
             const isSubOpen = openSub === item.label;
             return (
-              <div
-                key={item.label}
-                className={`nav-item ${isSubOpen ? "open-sub" : ""}`}
-              >
-                <a
+              <div key={item.label} className={`nav-item ${isSubOpen ? "open-sub" : ""}`}>
+                <NavAnchor
                   className="nav-link"
                   href={item.href}
                   onClick={(e) => {
@@ -60,7 +85,7 @@ export default function Header() {
                 >
                   {item.label}
                   {hasChildren && <span className="caret" aria-hidden="true" />}
-                </a>
+                </NavAnchor>
 
                 {hasChildren && (
                   <div className="dropdown" role="menu">
@@ -68,9 +93,15 @@ export default function Header() {
                       <span className="dropdown-label">Portfolios</span>
                     )}
                     {item.children.map((child) => (
-                      <a key={child.label} href={child.href} role="menuitem" onClick={close}>
+                      <NavAnchor
+                        key={child.label}
+                        href={child.href}
+                        external={child.external}
+                        role="menuitem"
+                        onClick={close}
+                      >
                         {child.label}
-                      </a>
+                      </NavAnchor>
                     ))}
                   </div>
                 )}
@@ -80,11 +111,7 @@ export default function Header() {
         </nav>
       </div>
 
-      <div
-        className={`nav-scrim ${open ? "show" : ""}`}
-        onClick={close}
-        aria-hidden="true"
-      />
+      <div className={`nav-scrim ${open ? "show" : ""}`} onClick={close} aria-hidden="true" />
     </header>
   );
 }
