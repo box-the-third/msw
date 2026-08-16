@@ -7,7 +7,7 @@ import { EVENTS, eventBySlug } from "@/lib/events";
 import { TEAM, img } from "@/lib/site";
 
 export const metadata = {
-  title: "About | My Saudi Wellness — Community Wellness Events with Active Life",
+  title: "About | My Saudi Wellness — Health & Wellness Events with Active Life",
   description:
     "My Saudi Wellness & ActiveLife deliver evidence-based Lifestyle Medicine across Saudi Arabia — School Health, Corporate Health and Community Health programs, screenings, workshops and sports events.",
 };
@@ -58,24 +58,12 @@ export default function AboutPage() {
       <Header />
 
       <main>
-        {/* Banner */}
-        <section
-          className="page-hero"
-          style={{ backgroundImage: `url(${img("events/freight-works/01.jpg")})` }}
-        >
-          <div className="container">
-            <p className="page-hero-eyebrow">About My Saudi Wellness</p>
-            <h1>Community Wellness Events</h1>
-            <p className="page-hero-sub">in association with Active Life</p>
-          </div>
-        </section>
-
-        {/* Community Wellness Events — one carousel slide per event */}
-        <section id="events" className="section">
+        {/* Health & Wellness Events — one carousel slide per event */}
+        <section id="events" className="section section-first">
           <div className="container">
             <div className="section-head">
               <h2>
-                Our <span className="hl">Community Wellness Events</span>
+                Our <span className="hl">Health and Wellness Events</span>
               </h2>
               <p>
                 Screenings, workshops and sports delivered by My Saudi Wellness in association with

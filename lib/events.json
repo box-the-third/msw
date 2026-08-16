@@ -356,7 +356,7 @@
   },
   {
     "slug": "rak-ports-screening",
-    "title": "RAK Ports Screening 2016",
+    "title": "RAK Ports Screening",
     "category": "corporate",
     "description": "Comprehensive on-site employee health screening for the RAK Ports workforce.",
     "cover": "events/rak-ports-screening/01.jpg",
@@ -656,7 +656,7 @@
   },
   {
     "slug": "pyp-school-workshop",
-    "title": "PYP School Workshop 2017",
+    "title": "PYP School Workshop",
     "category": "school",
     "description": "Classroom health-education workshop introducing school children to healthy habits.",
     "cover": "events/pyp-school-workshop/01.jpg",
@@ -696,21 +696,6 @@
         "src": "events/pyp-school-workshop/07.jpg",
         "w": 170,
         "h": 96
-      }
-    ]
-  },
-  {
-    "slug": "freight-works",
-    "title": "Freight Works Screening",
-    "category": "corporate",
-    "description": "On-site corporate health screening for logistics and freight employees.",
-    "cover": "events/freight-works/01.jpg",
-    "count": 1,
-    "images": [
-      {
-        "src": "events/freight-works/01.jpg",
-        "w": 1600,
-        "h": 1200
       }
     ]
   }

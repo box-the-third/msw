@@ -48,7 +48,7 @@ export default function Services() {
             Check out <span className="hl">our services</span>
           </h2>
           <p>
-            A complete lifestyle-medicine toolkit — from computerised health scans to workshops,
+            A complete lifestyle-medicine toolkit from computerised health scans to workshops,
             awards and research.
           </p>
         </div>
